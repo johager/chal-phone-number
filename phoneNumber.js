@@ -30,8 +30,6 @@ function createPhoneNumber2(arr) {
     }
     const str = arr.join('')
     return `(${str.substring(0,3)}) ${str.substring(3,6)}-${str.substring(6,10)}`
-
-    return `(${arr.slice})`
 }
 
 function createPhoneNumber3(arr) {
@@ -59,7 +57,7 @@ function createPhoneNumber4(arr) {
 }
 
 function testCreatePhoneNumber(inp, exp) {
-    const res = createPhoneNumber(inp)
+    const res = createPhoneNumber2(inp)
     const passed = res == exp
     console.log("passed:", passed, ` inp: ${inp}  res: '${res}'  exp: '${exp}'`)
 }
